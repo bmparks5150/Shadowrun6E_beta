@@ -1,3 +1,570 @@
-.charsheet .sheet-pc .sheet-header{
-    background: url(https://raw.githubusercontent.com/bmparks5150/Shadowrun6E/main/Shadowrun6E%20Character%20Sheet/images/Shadworun-Background.png);
+@import url('https://fonts.googleapis.com/css?family=Overpass:wght@300&display=swap');
+
+.charsheet {
+    background-color: #181717;
+    font-family: 'Overpass', sans-serif;
+    font-size: 8pt;
+    color: #629ac9
+}
+
+.sheet-logo {
+    width: 60%;
+    height: auto;
+    margin-top: 10px;
+}
+
+h3, h4, label {
+    color: inherit;
+}
+
+textarea {
+    background-color: #3d3d3d;
+    color: inherit;
+    border: none;
+}
+
+
+.sheet-header-col1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    background-color:#3d3d3d;
+    border:none;
+}
+
+strong {
+    color: inherit;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    color: inherit;
+}
+
+input[readonly] {
+    cursor:auto;
+}
+
+input[type="text"] {
+    width: 100%;
+    vertical-align: top;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    text-align: center;
+    background-color: #3d3d3d;
+}
+
+.sheet-main-attributes input[type="text"] {
+    height: 70%;
+    text-align: center;
+}
+
+.sheet-matrix input[type="text"] {
+    height: 70%;
+    text-align: center;
+}
+
+.sheet-grid-section.sheet-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.sheet-grid-section.sheet-header-col2{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.sheet-grid-section.sheet-btn-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.sheet-grid-section.sheet-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.sheet-main,
+.sheet-magic,
+.sheet-skills,
+.sheet-equipment,
+.sheet-vehicles,
+.sheet-matrix,
+.sheet-character {
+    display: none;
+}
+
+.sheet-tabstoggle[value="main"] ~ div.sheet-main,
+.sheet-tabstoggle[value="magic"] ~ div.sheet-magic,
+.sheet-tabstoggle[value="skills"] ~ div.sheet-skills,
+.sheet-tabstoggle[value="equipment"] ~ div.sheet-equipment,
+.sheet-tabstoggle[value="vehicles"] ~ div.sheet-vehicles,
+.sheet-tabstoggle[value="matrix"] ~ div.sheet-matrix,
+.sheet-tabstoggle[value="character"] ~ div.sheet-character {
+    display: block;
+}
+
+.repcontrol {
+    width: 35%;
+}
+
+.repcontainer {
+    width: 100%;
+}
+
+.sheet-repcontrol_edit {
+    width: 20%;
+}
+
+.sheet-repcontrol_add {
+    widows: 20%;
+}
+
+
+.sheet-header-row{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+.sheet-rating-col {
+    display: inline-block;
+}
+
+.sheet-main-attributes {
+    display: block;
+}
+
+.sheet-table-header {
+    height: 3em;
+    margin-bottom: -10px;
+}
+
+.sheet-table-label, .sheet-table-input, .sheet-table-roll {
+    height: 2em;
+}
+
+.sheet-table-label {
+    display: block;
+    text-align: end;
+}
+
+.sheet-attributes-col {
+    vertical-align: top;
+    display: inline-block;
+    width: 25%;
+}
+
+.sheet-rating-col, .sheet-mod-col, .sheet-total-col, .sheet-roll-col {
+    vertical-align: top;
+    display: inline-block;
+    width: 10%;
+}
+
+.sheet-table-label, .sheet-table-input, .sheet-table-roll {
+    height: 3em;
+}
+
+.sheet-name-wrapper, .sheet-metatype-wrapper {
+    display: inline-block;
+    width: 40%;
+}
+
+.sheet-rep-wrapper, .sheet-heat-wrapper,
+.sheet-karma-wrapper {
+    display: inline-block;
+    width: 15%;
+}
+
+.sheet-total-karma-wrapper, .sheet-nuyen-wrapper {
+    display: inline-block;
+    width: 25%;
+}
+
+.sheet-character-info {
+    display: block;
+    margin-left: 2em;
+    width: 100%;
+}
+
+.sheet-character-info-row {
+    width: 90%;
+    display: inline-block;
+}
+
+.sheet-character-label-row {
+    width: 90%;
+    display: inline-block;
+    margin-bottom: -10px;
+}
+
+.sheet-character-input-row {
+    width: 90%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.sheet-wrapper-label-xlarge{
+    display: inline-block;
+    width: 25%;
+}
+
+.sheet-wrapper-label-large, .sheet-wrapper-input-large {
+    display: inline-block;
+    width: 20%;
+}
+
+.sheet-wrapper-label-medium, .sheet-wrapper-input-medium {
+    display: inline-block;
+    width: 17%
+}
+
+.sheet-wrapper-label-small, .sheet-wrapper-input-small {
+    display: inline-block;
+    width: 7%;
+}
+
+.sheet-wrapper-textarea-small, .sheet-wrapper-textarea-label {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+
+.sheet-margin-left {
+    padding-left: 2rem;
+}
+
+.sheet-wrapper-textarea-small textarea{
+    resize: vertical;
+    width: 100%;
+    min-height: 8em;
+}
+
+.sheet-spell-labels{
+    display: inline-block;
+    width: 90%;
+}
+
+.sheet-spell-labels, .sheet-spirit-labels {
+    margin-bottom: -10px;
+}
+
+.sheet-spells-row {
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.sheet-inline{
+    display: inline-block;
+}
+
+.sheet-spell-name-wrapper, .sheet-spirit-name-wrapper, .sheet-spirit-type-wrapper,
+.sheet-skill-name-wrapper {
+    width: 15%;
+}
+
+.sheet-spell-school-wrapper, .sheet-spell-category-wrapper {
+    width: 10%;
+}
+
+.sheet-spell-type-wrapper, .sheet-spell-range-wrapper, .sheet-spell-dur-wrapper, 
+.sheet-spell-drain-wrapper, .sheet-spell-bonus-wrapper, .sheet-spirit-force-wrapper {
+    width: 5%;
+}
+
+.sheet-spell-description-wrapper{
+    width: 17%;
+}
+
+.sheet-btn {
+    width: 50%
+}
+
+.sheet-character input[type="text"] {
+    width: 100%;
+}
+
+.sheet-grid-section.sheet-spells-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sheet-spirit-labels {
+    width: 90%;
+}
+
+.sheet-grid-section.sheet-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sheet-physical-skills-col, .sheet-knowledge-skill-col {
+    width: 100%;
+    display: inline-block;
+}
+
+.sheet-physical-skill-row, .sheet-knowledge-skill-row {
+    width: 90%;
+    display: inline-block;
+}
+
+.sheet-physical-skill-row {
+
+}
+
+.sheet-knowledge-skill-labels {
+    margin-bottom: -10px;
+
+}
+
+.sheet-physical-skill-labels, .sheet-knowledge-skill-labels {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: -10px;
+}
+
+.sheet-skill-name-wrapper {
+    width: 25%;
+    margin-bottom: 2px;
+}
+
+.sheet-skill-attribute-wrapper {
+    width: 20%;
+}
+
+.sheet-skill-rating-wrapper, .sheet-skill-bonus-wrapper {
+    width: 10%;
+}
+
+.sheet-skill-description-wrapper {
+    width: 27%;
+}
+
+.sheet-wrapper-textarea-label {
+    margin-bottom: -10px;
+}
+
+.sheet-skill-header-wrapper, .sheet-spells-header-wrapper, .sheet-character-header-wrapper,
+.sheet-attributes-header-wrapper {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sheet-grid-section.sheet-equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sheet-equipment-header-wrapper, .sheet-armor-header-wrapper {
+    margin-top: 10px;
+
+}
+
+.sheet-equipment-labels, .sheet-equipment-quantity-wrapper, .sheet-equipment-name-wrapper,
+.sheet-equipment-notes-wrapper, .sheet-armor-labels, .sheet-armor-name-wrapper, 
+.sheet-armor-rating-wrapper, .sheet-armor-capacity-wrapper, .sheet-armor-notes-wrapper {
+    display: inline-block;
+}
+
+.sheet-equipment-labels, .sheet-equipment-row, .sheet-armor-labels, .sheet-armor-row {
+    width: 90%;
+}
+
+.sheet-equipment-labels, .sheet-armor-labels {
+    margin-bottom: -10px;
+}
+
+.sheet-equipment-row, .sheet-armor-row {
+    margin-bottom: 5px;
+}
+
+.sheet-equipment-quantity-wrapper {
+    width: 15%;
+}
+
+.sheet-equipment-name-wrapper {
+    width: 30%;
+}
+
+.sheet-equipment-notes-wrapper {
+    width: 40%
+}
+
+.sheet-armor-name-wrapper {
+    width: 30%;
+}
+
+.sheet-armor-rating-wrapper, .sheet-armor-capacity-wrapper {
+    width: 10%;
+}
+
+.sheet-armor-notes-wrapper {
+    width: 45%;
+}
+
+.sheet-weapons-label-row {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: -10px;
+}
+
+
+.sheet-weapon-name-wrapper, .sheet-weapon-ammo-wrapper {
+    width: 20%;
+    vertical-align: top;
+}
+
+.sheet-weapon-rating-wrapper {
+    width: 25%;
+    vertical-align: top;
+    margin-left: 30px;
+}
+
+.sheet-weapon-damage-wrapper, .sheet-weapon-pool-wrapper {
+    width: 5%;
+    vertical-align: top;
+}
+
+.sheet-weapon-damage-wrapper {
+    margin-right: 1px;
+}
+
+.sheet-weapon-rating-input {
+    width: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sheet-slash {
+    display: inline-block;
+    height: 50%;
+}
+
+.sheet-test {
+    padding-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sheet-weapons-row {
+    width: 90%;    
+}
+
+.sheet-vehicle-table {
+    margin-bottom: 20px;
+}
+
+.sheet-vehicle-label-row, .sheet-vehicles-row {
+    display: inline-block;
+    width: 100%;
+}
+.sheet-vehicle-label-row {
+    margin-bottom: -10px;
+}
+
+.sheet-vehicle-name-wrapper {
+    width: 15%;
+}
+
+.sheet-vehicle-handle-wrapper, .sheet-vehicle-speed-wrapper, .sheet-vehicle-acceleration-wrapper,
+.sheet-vehicle-seats-wrapper, .sheet-vehicle-body-wrapper, .sheet-vehicle-armor-wrapper {
+    width: 5%;
+    margin-left: 5px;
+}
+
+.sheet-vehicle-notes-wrapper {
+    width: 15%;
+    margin-left: 5px;
+}
+
+.sheet-vehicle-notes {
+    resize: vertical;
+    min-height: 4em;
+}
+
+.sheet-weapons-row {
+    width: 90%;    
+}
+
+.sheet-drone-table {
+    margin-bottom: 20px;
+}
+
+.sheet-drone-label-row, .sheet-drones-row {
+    display: inline-block;
+    width: 100%;
+}
+.sheet-drone-label-row {
+    margin-bottom: -10px;
+}
+
+.sheet-drone-name-wrapper {
+    width: 15%;
+}
+
+.sheet-drone-handle-wrapper, .sheet-drone-speed-wrapper, .sheet-drone-acceleration-wrapper,
+.sheet-drone-seats-wrapper, .sheet-drone-body-wrapper, .sheet-drone-armor-wrapper {
+    width: 5%;
+    margin-left: 5px;
+}
+
+.sheet-drone-notes-wrapper {
+    width: 15%;
+    margin-left: 5px;
+}
+
+.sheet-drone-notes {
+    resize: vertical;
+    min-height: 4em;
+}
+
+.sheet-vehicles-tab {
+    margin-top: 10px;
+}
+
+.sheet-matrix-tab-top {
+    display: block;
+    margin-top: 10px;
+}
+
+.sheet-grid-section.sheet-matrix-top-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sheet-persona-col, .sheet-programs-col {
+    display: inline-block;
+}
+
+.sheet-program-name-wrapper {
+    width: 20%;
+}
+
+.sheet-program-notes-wrapper {
+    width: 30%;
+    margin-left: 20px;
+}
+
+.sheet-program-notes {
+    resize: vertical;
+    width: 100%;
+    min-height: 4em;
+}
+
+.sheet-program-labels-wrapper {
+    margin-bottom: -10px;
 }

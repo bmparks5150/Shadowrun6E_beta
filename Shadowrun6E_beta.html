@@ -1,10 +1,958 @@
 <div class="sheet-pc">
-    <div class="sheet-header">
-        <div class="sheet-character-info">
-            <div class="sheet-logo">
-                <img src="https://raw.githubusercontent.com/bmparks5150/Shadowrun6E/main/Shadowrun6E%20Character%20Sheet/images/Shadowrun-Logo.png">
+    <div class="grid-section"><!--  -->
+        <div class="sheet-header grid-section">
+            <div class="sheet-header-col1">
+                <div class="sheet-logo">
+                    <img class="sheet-logo" src="https://raw.githubusercontent.com/bmparks5150/Shadowrun6E_beta/main/images/Shadowrun-Logo.png" />
+                </div>
             </div>
+            <div>
+                <div class="grid-section sheet-header-col2">
+                    <div class="sheet-header-row sheet-header-label">
+                        <div class="sheet-name-wrapper">
+                            <label>Name</label>
+                        </div>
+                        <div class="sheet-metatype-wrapper sheet-header-label">
+                            <label>Metatype</label>
+                        </div>
+                    </div>
+                    <div class="sheet-header-row-input">
+                        <div class="sheet-name-wrapper">
+                            <input type="text" class="sheet-header-input" name="attr_character_name" style="width: 75%;" readonly>
+                        </div>
+                        <div class="sheet-metatype-wrapper">
+                            <input type="text" class="sheet-header-input" name="attr_character_metatype" style="width: 75%;" readonly>
+                        </div>  
+                    </div>
+                    <div class="sheet-header-row">
+                        <div class="sheet-rep-wrapper sheet-header-label">
+                            <label>Rep</label>
+                        </div>
+                        <div class="sheet-heat-wrapper sheet-header-label">
+                            <label>Heat</label>
+                        </div>
+                        <div class="sheet-karma-wrapper sheet-header-label">
+                            <label>Karma</label>
+                        </div>
+                        <div class="sheet-nuyen-wrapper sheet-header-label">
+                            <label>Nuyen ¥</label>
+                        </div>
+                    </div>
+                    <div class="sheet-header-row-input">
+                        <div class="sheet-rep-wrapper">
+                            <input type="text" class="sheet-header-input" name="attr_character_rep" style="width: 50%;" readonly>
+                        </div>
+                        <div class="sheet-heat-wrapper">
+                            <input type="text" class="sheet-header-input" name="attr_character_heat" style="width: 50%;" readonly>
+                        </div>
+                        <div class="sheet-karma-wrapper">
+                            <input type="text" class="sheet-header-input" name="attr_character_karma" style="width: 50%;" readonly>
+                        </div>
+                        <div class="sheet-nuyen-wrapper">
+                            <input type="text" class="sheet-header-input" name="attr_character_nuyen" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="grid-section">
+        <div class="sheet-btn-grid grid-section">
+            <button type="action" name="act_main">Main</button>
+            <button type="action" name="act_skills">Skills</button>
+            <button type="action" name="act_magic">Magic</button>
+            <button type="action" name="act_equipment">Equipment</button>
+            <button type="action" name="act_vehicles">Vehicles/Drones</button>
+            <button type="action" name="act_matrix">Matrix</button>
+            <button type="action" name="act_character">Character</button>
+        </div>
+    </div>
 
+    <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="character" />
+
+    <div class="sheet-main">
+        <div class="grid-section sheet-main">    
+            <div class="grid-section sheet-main-attributes">  
+                <div class="sheet-attributes-header-wrapper">
+                    <h3>Attributes</h3>          
+                </div>
+                <div class="sheet-attributes-col">
+                    <div class="sheet-table-header">
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Body</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Agility</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Reaction</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Strength</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Willpower</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Logic</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Intuition</label>
+                    </div>
+                    <div class="sheet-table-label">
+                        <label>Charisma</label>
+                    </div>
+                </div>
+                <div class="sheet-rating-col">
+                    <div class="sheet-table-header">
+                        <h4>Rating<h4>
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_body_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_agility_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_reaction_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_strength_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_willpower_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_logic_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_intuition_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_charisma_rating" style="width: 50%;">
+                    </div>
+                </div>
+                <div class="sheet-mod-col">
+                    <div class="sheet-table-header">
+                        <h4>Mod</h4>
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_body_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_agility_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_reaction_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_strength_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_willpower_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_logic_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_intuition_mod" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_charisma_mod" style="width: 50%;">
+                    </div>
+                </div>
+                <div class="sheet-total-col">
+                    <div class="sheet-table-header">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_body_total" disabled style="width: 50%;" value="@{character_body_rating} + @{character_body_mod}" data-formula="@{character_body_rating} + @{character_body_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_agility_total" disabled style="width: 50%;" value="@{character_agility_rating} + @{character_agility_mod}" data-formula="@{character_agility_rating} + @{character_agility_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_reaction_total" disabled style="width: 50%;" value="@{character_reaction_rating} + @{character_reaction_mod}" data-formula="@{character_reactiony_rating} + @{character_reactiony_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_strength_total" disabled style="width: 50%;" value="@{character_strength_rating} + @{character_strength_mod}" data-formula="@{character_strength_rating} + @{character_strength_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_willpower_total" disabled style="width: 50%;" value="@{character_willpower_rating} + @{character_willpower_mod}" data-formula="@{character_willpower_rating} + @{character_willpower_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_logic_total" disabled style="width: 50%;" value="@{character_logic_rating} + @{character_logic_mod}" data-formula="@{character_logic_rating} + @{character_logic_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_intuition_total" disabled style="width: 50%;" value="@{character_intuition_rating} + @{character_intuition_mod}" data-formula="@{character_intuition_rating} + @{character_intuition_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_charisma_total" disabled style="width: 50%;" value="@{character_charisma_rating} + @{character_charisma_mod}" data-formula="@{character_charisma_rating} + @{character_charisma_mod}">
+                    </div>
+                </div>
+                <div class="sheet-roll-col">
+                    <div class="sheet-table-header">
+                        <h4>Roll</h4>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                    <div class="sheet-table-roll">
+                        <button class="btn" type="roll"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-skills">
+        <div class="sheet-skills-grid grid-section">
+            <div class="sheet-physical-skills-col">
+                <div class="sheet-skill-header-wrapper">
+                    <h3>Physical Skills</h3>
+                </div>
+                <div class="sheet-physical-skill-row">
+                    <div class="sheet-physical-skill-labels">
+                        <div class="sheet-skill-name-wrapper sheet-inline">
+                            <label>Name</label>
+                        </div>                  
+                        <div class="sheet-skill-attribute-wrapper sheet-inline">
+                            <label>Attribute</label>
+                        </div>
+                        <div class="sheet-skill-rating-wrapper sheet-inline">
+                            <label>Rating</label>
+                        </div>
+                        <div class="sheet-skill-bonus-wrapper sheet-inline">
+                            <label>Bonus</label>
+                        </div>
+                        <div class="sheet-skill-description-wrapper sheet-inline">
+                            <label>Description</label>
+                        </div>
+                    </div>
+                </div>
+                <fieldset class="repeating_physicalskills" style="display: none;">
+                    <div class="sheet-physical-skill-row">
+                        <div class="sheet-skill-name-wrapper sheet-inline">
+                            <input type="text" name="attr_skill_name">
+                        </div>
+                        <div class="sheet-skill-attribute-wrapper sheet-inline">
+                            <input type="text" name="attr_skill_attribute">
+                        </div>
+                        <div class="sheet-skill-rating-wrapper sheet-inline">
+                            <input type="text" name="attr_skill_rating">
+                        </div>
+                        <div class="sheet-skill-bonus-wrapper sheet-inline">
+                            <input type="text" name="attr_skill_bonus">
+                        </div>
+                        <div class="sheet-skill-description-wrapper sheet-inline">
+                            <input type="text" name="attr_skill_description">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="sheet-knowledge-skills-col">
+                <div class="sheet-skill-header-wrapper">
+                    <h3>Knowledge Skills</h3>
+                </div>
+                <div class="sheet-knowledge-skill-row">
+                    <div class="sheet-knowledge-skill-labels">
+                        <div class="sheet-skill-name-wrapper sheet-inline">
+                            <label>Name</label>
+                        </div>                        
+                        <div class="sheet-skill-attribute-wrapper sheet-inline">
+                            <label>Type</label>
+                        </div>
+                        <div class="sheet-skill-rating-wrapper sheet-inline">
+                            <label>Rating</label>
+                        </div>
+                        <div class="sheet-skill-bonus-wrapper sheet-inline">
+                            <label>Bonus</label>
+                        </div>
+                        <div class="sheet-skill-description-wrapper sheet-inline">
+                            <label>Description</label>
+                        </div>
+                    </div>
+                </div>
+                <fieldset class="repeating_knowledgeskills" style="display: none;">
+                    <div class="sheet-knowledge-skill-row">
+                        <div class="sheet-skill-name-wrapper sheet-inline">
+                            <input type="text" name="attr_knowskill_name">
+                        </div>
+                        <div class="sheet-skill-attribute-wrapper sheet-inline">
+                            <input type="text" name="attr_knowskill_type">
+                        </div>
+                        <div class="sheet-skill-rating-wrapper sheet-inline">
+                            <input type="text" name="attr_knowskill_rating">
+                        </div>
+                        <div class="sheet-skill-bonus-wrapper sheet-inline">
+                            <input type="text" name="attr_knowskill_bonus">
+                        </div>
+                        <div class="sheet-skill-description-wrapper sheet-inline">
+                            <input type="text" name="attr_knowskill_description">
+                        </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>        
+        <div class="repcontainer" data-groupname="repeating_physicalskills">
+            <div class="repitem">
+                <div class="itemcontrol sheet-inline">
+                </div>
+            </div>
+        </div>        
+        <div class="repcontainer" data-groupname="repeating_knowledgeskills">
+            <div class="repitem">
+                <div class="itemcontrol sheet-inline">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-magic">
+        <div class="sheet-spells-header-wrapper">
+            <h3>Magic</h3>
+        </div>
+        <div class="sheet-spell-labels">
+            <div class="sheet-spell-name-wrapper sheet-inline">
+                <label>Name</label>
+            </div>
+            <div class="sheet-spell-school-wrapper sheet-inline">
+                <label>School</label>
+            </div>
+            <div class="sheet-spell-type-wrapper sheet-inline">
+                <label>Type</label>
+            </div>
+            <div class="sheet-spell-category-wrapper sheet-inline">
+                <label>Category</label>
+            </div>
+            <div class="sheet-spell-range-wrapper sheet-inline">
+                <label>Range</label>
+            </div>
+            <div class="sheet-spell-dur-wrapper sheet-inline">
+                <label>Dur</label>
+            </div>
+            <div class="sheet-spell-drain-wrapper sheet-inline">
+                <label>Drain</label>
+            </div>
+            <div class="sheet-spell-description-wrapper sheet-inline">
+                <label>Description</label>
+            </div>
+            <div class="sheet-spell-bonus-wrapper sheet-inline">
+                <label>Bonus</label>
+            </div>
+        </div>
+        <fieldset class="repeating_spells" style="display: none;">
+            <div class="sheet-spells-row">
+                <div class="sheet-spell-name-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_name">
+                </div>
+                <div class="sheet-spell-school-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_school">
+                </div>
+                <div class="sheet-spell-type-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_type">
+                </div>
+                <div class="sheet-spell-category-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_category">
+                </div>
+                <div class="sheet-spell-range-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_range">
+                </div>
+                <div class="sheet-spell-dur-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_dur">
+                </div>
+                <div class="sheet-spell-drain-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_drain">
+                </div>
+                <div class="sheet-spell-description-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_description">
+                </div>
+                <div class="sheet-spell-bonus-wrapper sheet-inline">
+                    <input type="text" name="attr_spell_bonus">
+                </div>
+            </div>
+        </fieldset>
+        <div class="repcontainer" data-groupname="repeating_spells">
+            <div class="repitem">
+                <div class="itemcontrol sheet-inline">
+                </div>
+            </div>
+        </div>
+        <div class="sheet-spirits-header">
+            <h3>Spirits</h3>
+        </div>
+        <div class="sheet-spirit-labels">
+            <div class="sheet-spirit-name-wrapper sheet-inline">
+                <label>Name</label>
+            </div>
+            <div class="sheet-spirit-type-wrapper sheet-inline">
+                <label>Type</label>
+            </div>
+            <div class="sheet-spirit-force-wrapper sheet-inline">
+                <label>Force</label>
+            </div>
+        </div>
+        <fieldset class="repeating_spirits" style="display: none;">
+            <div class="sheet-spells-row">
+                <div class="sheet-spirit-name-wrapper sheet-inline">
+                    <input type="text" name="attr_spirit_name">
+                </div>
+                <div class="sheet-spirit-type-wrapper sheet-inline">
+                    <input type="text" name="attr_spirit_type">
+                </div>
+                <div class="sheet-spirit-force-wrapper sheet-inline">
+                    <input type="text" name="attr_spirit_force">
+                </div>
+            </div>
+        </fieldset>
+        <div class="repcontainer" data-groupname="repeating_spirits">
+            <div class="repitem">
+                <div class="itemcontrol sheet-inline">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-equipment">
+        <div class="grid-section sheet-equipment-grid">
+            <div class="sheet-equipment-col1">
+                <div class="sheet-equipment-header-wrapper">
+                    <h3>Equipment</h3>
+                </div>
+                <div class="sheet-equipment-labels">
+                    <div class="sheet-equipment-quantity-wrapper">
+                        <label>Qty</label>
+                    </div>
+                    <div class="sheet-equipment-name-wrapper">
+                        <label>Name</label>
+                    </div>
+                    <div class="sheet-equipment-notes-wrapper">
+                        <label>Notes</label>
+                    </div>
+                </div>
+                <fieldset class="repeating_equipment" style="display: none;">
+                    <div class="sheet-equipment-row">
+                        <div class="sheet-equipment-quantity-wrapper sheet-inline">
+                            <input type="text" name="attr_equipment_quantity">
+                        </div>
+                        <div class="sheet-equipment-name-wrapper sheet-inline">
+                            <input type="text" name="attr_equipment_name">
+                        </div>
+                        <div class="sheet-equipment-notes-wrapper sheet-inline">
+                            <input type="text" name="attr_equipment_notes">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="repcontainer" data-groupname="repeating_equipment">
+                    <div class="repitem">
+                        <div class="itemcontrol sheet-inline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-equipment-col2">
+                <div class="sheet-armor-header-wrapper">
+                    <h3>Armor</h3>
+                </div>
+                <div class="sheet-armor-labels">
+                    <div class="sheet-armor-name-wrapper">
+                        <label>Name</label>
+                    </div>
+                    <div class="sheet-armor-rating-wrapper">
+                        <label>Rtg</label>
+                    </div>
+                    <div class="sheet-armor-capacity-wrapper">
+                        <label>Cap</label>
+                    </div>
+                    <div class="sheet-armor-notes-wrapper">
+                        <label>Notes</label>
+                    </div>
+                </div>
+                <fieldset class="repeating_armor" style="display: none;">
+                    <div class="sheet-armor-row">
+                        <div class="sheet-armor-name-wrapper sheet-inline">
+                            <input type="text" name="attr_armor_name">
+                        </div>
+                        <div class="sheet-armor-rating-wrapper sheet-inline">
+                            <input type="text" name="attr_armor_rating">
+                        </div>
+                        <div class="sheet-armor-capacity-wrapper sheet-inline">
+                            <input type="text" name="attr_armor_capacity">
+                        </div>
+                        <div class="sheet-armor-notes-wrapper sheet-inline">
+                            <input type="text" name="attr_armor_notes">
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="repcontainer" data-groupname="repeating_armor">
+                    <div class="repitem">
+                        <div class="itemcontrol sheet-inline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-weapons-container">
+                <div class="sheet-weapon-header-wrapper">
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+        <div class="sheet-weapons-container">
+            <div class="sheet-weapons-header-wrapper">
+                <h3>Weapons</h3>
+            </div>
+            <div class="sheet-weapons-label-row">
+                <div class="sheet-weapon-name-wrapper sheet-inline">
+                    <label>Name</label>
+                </div>
+                <div class="sheet-weapon-rating-wrapper sheet-inline">
+                    <label>Att. Rating</label>
+                </div>
+                <div class="sheet-weapon-damage-wrapper sheet-inline">
+                    <label>Damage</label>
+                </div>
+                <div class="sheet-weapon-ammo-wrapper sheet-inline">
+                    <label>Ammo</label>
+                </div>
+                <div class="sheet-weapon-pool-wrapper sheet-inline">
+                    <label>Pool</label>
+                </div>
+            </div>
+            <fieldset class="repeating_weapons" style="display: none;">
+                <div class="sheet-weapons-row">
+                    <div class="sheet-weapon-name-wrapper sheet-inline">
+                        <input type="text" name="attr_weapon_name">
+                    </div>
+                    <div class="sheet-weapon-rating-wrapper sheet-inline">
+                        <div class="sheet-weapon-rating-input sheet-inline">
+                            <input type="text" name="attr_weapon_close_rating">
+                        </div>
+                        <div class="sheet-slash">
+                            <div class="sheet-test">
+                                <p>/</p>
+                            </div>
+                        </div>
+                        <div class="sheet-weapon-rating-input">
+                            <div class="sheet-weapon-near sheet-inline">
+                                <input type="text" name="attr_weapon_near_rating">
+                            </div>
+                        </div>
+                        <div class="sheet-slash">
+                            <div class="sheet-test">
+                                <p>/</p>
+                            </div>
+                        </div>
+                        <div class="sheet-weapon-rating-input">
+                            <div class="sheet-weapon-medium sheet-inline">
+                                <input type="text" name="attr_weapon_medium_rating">
+                            </div>
+                        </div>
+                        <div class="sheet-slash">
+                            <div class="sheet-test">
+                                <p>/</p>
+                            </div>
+                        </div>
+                        <div class="sheet-weapon-rating-input">
+                            <div class="sheet-weapon-far sheet-inline">
+                                <input type="text" name="attr_weapon_far_rating">
+                            </div>
+                        </div>
+                        <div class="sheet-slash">
+                            <div class="sheet-test">
+                                <p>/</p>
+                            </div>
+                        </div>
+                        <div class="sheet-weapon-rating-input">
+                            <div class="sheet-weapon-extreme sheet-inline">
+                                <input type="text" name="attr_weapon_extreme_rating">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sheet-weapon-damage-wrapper sheet-inline">
+                        <input type="text" name="attr_weapon_damage">
+                    </div>
+                    <div class="sheet-weapon-ammo-wrapper sheet-inline">
+                        <input type="text" name="attr_weapon_ammo">
+                    </div>
+                    <div class="sheet-weapon-pool-wrapper sheet-inline">
+                        <input type="text" name="attr_weapon_pool">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="repcontainer" data-groupname="repeating_weapons">
+                <div class="repitem">
+                    <div class="itemcontrol sheet-inline">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-vehicles">
+        <div class="sheet-vehicles-tab">
+            <div class="sheet-vehicle-table">
+                <div class="sheet-vehicle-header-wrapper">
+                    <h3>Vehicles</h3>
+                </div>
+                <div class="sheet-vehicle-label-row">
+                    <div class="sheet-vehicle-name-wrapper sheet-inline">
+                        <label>Name</label>
+                    </div>
+                    <div class="sheet-vehicle-handle-wrapper sheet-inline">
+                        <label>Hand.</label>
+                    </div>
+                    <div class="sheet-vehicle-speed-wrapper sheet-inline">
+                        <label>Speed</label>
+                    </div>
+                    <div class="sheet-vehicle-acceleration-wrapper sheet-inline">
+                        <label>Accl.</label>
+                    </div>
+                    <div class="sheet-vehicle-seats-wrapper sheet-inline">
+                        <label>Seats</label>
+                    </div>
+                    <div class="sheet-vehicle-body-wrapper sheet-inline">
+                        <label>Body</label>
+                    </div>
+                    <div class="sheet-vehicle-armor-wrapper sheet-inline">
+                        <label>Armor</label>
+                    </div>
+                    <div class="sheet-vehicle-notes-wrapper sheet-inline">
+                        <label>Notes</label>
+                    </div>
+                </div>
+                <fieldset class="repeating_vehicles" style="display: none;">
+                    <div class="sheet-vehicles-row">
+                        <div class="sheet-vehicle-name-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_name">
+                        </div>
+                        <div class="sheet-vehicle-handle-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_handle">
+                        </div>
+                        <div class="sheet-vehicle-speed-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_speed">
+                        </div>
+                        <div class="sheet-vehicle-acceleration-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_acceleration">
+                        </div>
+                        <div class="sheet-vehicle-seats-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_seats">
+                        </div>
+                        <div class="sheet-vehicle-body-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_body">
+                        </div>
+                        <div class="sheet-vehicle-armor-wrapper sheet-inline">
+                            <input type="text" name="attr_vehicle_armor">
+                        </div>
+                        <div class="sheet-vehicle-notes-wrapper sheet-inline">
+                            <textarea class="sheet-vehicle-notes" name="attr_vehicle_notes" style="height: 15px; vertical-align: top;"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="repcontainer" data-groupname="repeating_equipment">
+                    <div class="repitem">
+                        <div class="itemcontrol sheet-inline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-drone-table">
+                <div class="sheet-drone-header-wrapper">
+                    <h3>Drones</h3>
+                </div>
+                <div class="sheet-drone-label-row">
+                    <div class="sheet-drone-name-wrapper sheet-inline">
+                        <label>Name</label>
+                    </div>
+                    <div class="sheet-drone-handle-wrapper sheet-inline">
+                        <label>Hand.</label>
+                    </div>
+                    <div class="sheet-drone-speed-wrapper sheet-inline">
+                        <label>Speed</label>
+                    </div>
+                    <div class="sheet-drone-acceleration-wrapper sheet-inline">
+                        <label>Accl.</label>
+                    </div>
+                    <div class="sheet-drone-seats-wrapper sheet-inline">
+                        <label>Seats</label>
+                    </div>
+                    <div class="sheet-drone-body-wrapper sheet-inline">
+                        <label>Body</label>
+                    </div>
+                    <div class="sheet-drone-armor-wrapper sheet-inline">
+                        <label>Armor</label>
+                    </div>
+                    <div class="sheet-drone-notes-wrapper sheet-inline">
+                        <label>Notes</label>
+                    </div>
+                </div>
+                <fieldset class="repeating_drones" style="display: none;">
+                    <div class="sheet-drones-row">
+                        <div class="sheet-drone-name-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_name">
+                        </div>
+                        <div class="sheet-drone-handle-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_handle">
+                        </div>
+                        <div class="sheet-drone-speed-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_speed">
+                        </div>
+                        <div class="sheet-drone-acceleration-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_acceleration">
+                        </div>
+                        <div class="sheet-drone-seats-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_seats">
+                        </div>
+                        <div class="sheet-drone-body-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_body">
+                        </div>
+                        <div class="sheet-drone-armor-wrapper sheet-inline">
+                            <input type="text" name="attr_drone_armor">
+                        </div>
+                        <div class="sheet-drone-notes-wrapper sheet-inline">
+                            <textarea class="sheet-drone-notes" name="attr_drone_notes" style="height: 15px; vertical-align: top;"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="repcontainer" data-groupname="repeating_equipment">
+                    <div class="repitem">
+                        <div class="itemcontrol sheet-inline">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-matrix">
+        <div class="sheet-matrix-tab-top">
+            <div class="grid-section sheet-matrix-top-container">
+                <div class="sheet-persona-col">  
+                    <div class="sheet-persona-header-wrapper">
+                        <h3>Persona</h3>          
+                    </div>
+                    <div class="sheet-attributes-col">
+                        <div class="sheet-table-header">
+                        </div>
+                        <div class="sheet-table-label">
+                            <label>Attack</label>
+                        </div>
+                        <div class="sheet-table-label">
+                            <label>Sleaze</label>
+                        </div>
+                        <div class="sheet-table-label">
+                            <label>Data Proc.</label>
+                        </div>
+                        <div class="sheet-table-label">
+                            <label>Firewall</label>
+                        </div>            
+                    </div>
+                    <div class="sheet-rating-col">
+                        <div class="sheet-table-header">
+                            <h4>Rating<h4>
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_attack_rating" style="width: 50%;">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_sleaze_rating" style="width: 50%;">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_data_rating" style="width: 50%;">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_firewall_rating" style="width: 50%;">
+                        </div>
+                    </div>
+                    <div class="sheet-mod-col">
+                        <div class="sheet-table-header">
+                            <h4>Mod</h4>
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_attack_mod" style="width: 50%;">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_sleaze_mod" style="width: 50%;">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_data_mod" style="width: 50%;">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" value="0" name="attr_persona_firewall_mod" style="width: 50%;">
+                        </div>
+                    </div>
+                    <div class="sheet-total-col">
+                        <div class="sheet-table-header">
+                            <h4>Total</h4>
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" name="attr_persona_attack_total" disabled style="width: 50%;" value="@{persona_attack_rating} + @{persona_attack_mod}" data-formula="@{persona_attack_rating} + @{persona_attack_mod}">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" name="attr_persona_sleaze_total" disabled style="width: 50%;" value="@{persona_sleaze_rating} + @{persona_sleaze_mod}" data-formula="@{persona_sleaze_rating} + @{persona_sleaze_mod}">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" name="attr_persona_data_total" disabled style="width: 50%;" value="@{persona_data_rating} + @{persona_data_mod}" data-formula="@{persona_data_rating} + @{persona_data_mod}">
+                        </div>
+                        <div class="sheet-table-input">
+                            <input type="text" name="attr_persona_firewall_total" disabled style="width: 50%;" value="@{persona_firewall_rating} + @{persona_firewall_mod}" data-formula="@{persona_firewall_rating} + @{persona_firewall_mod}">
+                        </div>                        
+                    </div>
+                </div>
+                <div class="sheet-programs-col">
+                    <div class="sheet-programs-header-wrapper">
+                        <h3>Cyber Programs</h3>
+                    </div>
+                    <div class="sheet-program-labels-wrapper">
+                        <div class="sheet-program-name-wrapper sheet-inline">
+                            <label>Name</label>
+                        </div>
+                        <div class="sheet-program-notes-wrapper sheet-inline">
+                            <label>Notes</label>
+                        </div>
+                    </div>
+                    <fieldset class="repeating_program" style="display: none;">
+                        <div class="sheet-program-row">
+                            <div class="sheet-program-name-wrapper sheet-inline">
+                                <input type="text" name="attr_vehicle_name">
+                            </div>
+                            <div class="sheet-program-notes-wrapper sheet-inline">
+                                <textarea class="sheet-program-notes" name="attr_program_notes" style="height: 15px; vertical-align: top;"></textarea> 
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="repcontainer" data-groupname="repeating_notes">
+                        <div class="repitem">
+                            <div class="itemcontrol sheet-inline">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sheet-character">
+        <div class="sheet-character-info">   
+            <div class="sheet-character-header-wrapper">         
+                <h3>Character Information</h3>
+            </div>
+            <div class="sheet-character-label-row">
+                <div class="sheet-wrapper-label-large">
+                    <label>Name</label>
+                </div>
+                <div class="sheet-wrapper-label-large">
+                    <label>Metatype</label>
+                </div>
+                <div class="sheet-wrapper-label-large">
+                    <label>Ethnicity</label>
+                </div>
+                <div class="sheet-wrapper-label-small">
+                    <label>Sex</label>
+                </div>
+                <div class="sheet-wrapper-label-small">
+                    <label>Age</label>
+                </div>
+                <div class="sheet-wrapper-label-small">
+                    <label>Height</label>
+                </div>
+                <div class="sheet-wrapper-label-small">
+                    <label>Weight</label>
+                </div>               
+            </div>
+            <div class="sheet-character-input-row">
+                <div class="sheet-wrapper-input-large">
+                    <input type="text" name="attr_character_name">
+                </div>
+                <div class="sheet-wrapper-input-large">
+                    <input type="text" name="attr_character_metatype">
+                </div>
+                <div class="sheet-wrapper-input-large">
+                    <input type="text" name="attr_character_ethnicity">
+                </div>
+                <div class="sheet-wrapper-input-small">
+                    <input type="text" name="attr_character_sex">
+                </div>
+                <div class="sheet-wrapper-input-small">
+                    <input type="text" name="attr_character_age">
+                </div>
+                <div class="sheet-wrapper-input-small">
+                    <input type="text" name="attr_character_hieght">
+                </div>
+                <div class="sheet-wrapper-input-small">
+                    <input type="text" name="attr_character_weight">
+                </div>
+            </div>
+            <div class="sheet-character-label-row">
+                <div class="sheet-wrapper-label-medium">
+                    <label>Reputation</label>
+                </div>
+                <div class="sheet-wrapper-label-medium">
+                    <label>Heat</label>
+                </div>
+                <div class="sheet-wrapper-label-medium">
+                    <label>Karma</label>
+                </div>
+                <div class="sheet-wrapper-label-medium">
+                    <label>Total Karma</label>
+                </div>
+            </div>
+            <div class="sheet-character-input-row">
+                <div class="sheet-wrapper-input-medium">
+                    <input type="text" name="attr_character_rep">
+                </div>
+                <div class="sheet-wrapper-input-medium">
+                    <input type="text" name="attr_character_heat">
+                </div>
+                <div class="sheet-wrapper-input-medium">
+                    <input type="text" name="attr_character_karma">
+                </div>
+                <div class="sheet-wrapper-input-medium">
+                    <input type="text" name="attr_character_total_karma">
+                </div>
+            </div>
+            <div class="sheet-character-info-row sheet-character-label-row-down">
+                <div class="sheet-wrapper-textarea-label">
+                    <label>Background</label>
+                </div>
+                <div class="sheet-wrapper-textarea-label">
+                    <label>Notes</label>
+            </div>
+            <div class="sheet-character-info-row">
+                <div class="sheet-wrapper-textarea-small">
+                    <textarea name="attr_character_background" style="height: 15px;"></textarea>
+                </div>
+                <div class="sheet-wrapper-textarea-small sheet-margin-left">
+                    <textarea name="attr_character_notes" style="height: 15px;"></textarea>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<!-----------------------------------Script Workers----------------------------------------->
+
+<script type="text/worker">
+    const buttonList = ["main", "magic", "skills", "equipment", "vehicles", "matrix", "character"];
+
+    buttonList.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>
