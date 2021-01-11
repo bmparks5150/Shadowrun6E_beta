@@ -104,6 +104,9 @@
                     <div class="sheet-table-label">
                         <label>Charisma</label>
                     </div>
+                    <div class="sheet-table-label">
+                        <label>Magic</label>
+                    </div>
                 </div>
                 <div class="sheet-rating-col">
                     <div class="sheet-table-header">
@@ -132,6 +135,9 @@
                     </div>
                     <div class="sheet-table-input">
                         <input type="text" value="0" name="attr_character_charisma_rating" style="width: 50%;">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_magic_rating" style="width: 50%;">
                     </div>
                 </div>
                 <div class="sheet-mod-col">
@@ -162,6 +168,9 @@
                     <div class="sheet-table-input">
                         <input type="text" value="0" name="attr_character_charisma_mod" style="width: 50%;">
                     </div>
+                    <div class="sheet-table-input">
+                        <input type="text" value="0" name="attr_character_magic_mod" style="width: 50%;">
+                    </div>
                 </div>
                 <div class="sheet-total-col">
                     <div class="sheet-table-header">
@@ -190,6 +199,9 @@
                     </div>
                     <div class="sheet-table-input">
                         <input type="text" name="attr_character_charisma_total" disabled style="width: 50%;" value="@{character_charisma_rating} + @{character_charisma_mod}" data-formula="@{character_charisma_rating} + @{character_charisma_mod}">
+                    </div>
+                    <div class="sheet-table-input">
+                        <input type="text" name="attr_character_magic_total" disabled style="width: 50%;" value="@{character_magic_rating} + @{character_magic_mod}" data-formula="@{character_magic_rating} + @{character_magic_mod}">
                     </div>
                 </div>
                 <div class="sheet-roll-col">
@@ -871,7 +883,6 @@
                 </div>
                 <div class="sheet-wrapper-label-small">
                     <label>Weight</label>
-                </div>               
             </div>
             <div class="sheet-character-input-row">
                 <div class="sheet-wrapper-input-large">
@@ -904,6 +915,9 @@
                     <label>Heat</label>
                 </div>
                 <div class="sheet-wrapper-label-medium">
+                    <label>Edge</label>
+                </div>
+                <div class="sheet-wrapper-label-medium">
                     <label>Karma</label>
                 </div>
                 <div class="sheet-wrapper-label-medium">
@@ -916,6 +930,9 @@
                 </div>
                 <div class="sheet-wrapper-input-medium">
                     <input type="text" name="attr_character_heat">
+                </div>
+                <div class="sheet-wrapper-input-medium">
+                    <input type="text" name="attr_character_edge">
                 </div>
                 <div class="sheet-wrapper-input-medium">
                     <input type="text" name="attr_character_karma">
